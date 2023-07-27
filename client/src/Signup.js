@@ -23,7 +23,7 @@ export default function Signup(){
     }
     function sendData(d){
        
-            axios.post('http://localhost:8080/signup', data)
+            axios.post('https://todo-list-ywe3.onrender.com/signup', data)
             .then(resp=>{
                 setRes({...res , succ : resp.data.message});
                 setShow({...show , succ : true});
