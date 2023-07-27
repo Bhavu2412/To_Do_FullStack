@@ -7,7 +7,7 @@ export default function Home({ jwtToken }) {
   useEffect(()=>{
     let isMounted = true;
     if(jwtToken){
-        axios.get('http://localhost:8080/home',{
+        axios.get('https://todo-list-ywe3.onrender/home.com',{
       headers:{
         Authorization: `Bearer ${jwtToken}`
       }
