@@ -25,7 +25,7 @@ export default function Forgetpass(){
         else{
             sendDatapass(newpass.pass , email);
             setTimeout(()=>{
-                window.location='http://localhost:3000/login';
+                window.location='https://todo-list-ywe3.onrender.com/login';
             },3000)
         }
     }
@@ -49,7 +49,7 @@ export default function Forgetpass(){
 
 
     function sendData(email){
-        axios.post('http://localhost:8080/forgetpassword' ,{email : email})
+        axios.post('https://todo-list-ywe3.onrender.com/forgetpassword' ,{email : email})
         .then(res=>{
             setShowOtp(true);
             setShow({...show , succ : true});
@@ -63,7 +63,7 @@ export default function Forgetpass(){
     }
 
     function sendDatapass(n , e){
-        axios.post('http://localhost:8080/reset',{email : e , password : n})
+        axios.post('https://todo-list-ywe3.onrender.com/reset',{email : e , password : n})
         .then(res=>{
             
             setCount(n=> n+1);
@@ -78,7 +78,7 @@ export default function Forgetpass(){
     }
 
     function sendDataotp(o , e){
-        axios.post('http://localhost:8080/otpverify',{otp : o , email : e})
+        axios.post('https://todo-list-ywe3.onrender.com/otpverify',{otp : o , email : e})
         .then(res=>{
            setVerify(true);
             setCount(n=> n+1);
