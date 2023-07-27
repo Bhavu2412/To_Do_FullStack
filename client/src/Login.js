@@ -26,7 +26,7 @@ export default function Login(){
         
     }
     function sendData(d){
-        axios.post('http://localhost:8080/login',d)
+        axios.post('https://todo-list-ywe3.onrender/login.com',d)
         .then(res=>{
             localStorage.setItem('token' , res.data.token);
             setShow({...show , succ : true});
