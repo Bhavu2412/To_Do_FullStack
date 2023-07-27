@@ -7,7 +7,7 @@ export default function Card({title , done , id , jwtToken}){
    const data={title:'hi there!!!' , done : true};
    function handleEditClick(){
        
-    axios.patch(`http://localhost:8080/edit/${id}`,data,{
+    axios.patch(`https://todo-list-ywe3.onrender.com/edit/${id}`,data,{
         header:{
             Authorization : `Bearer ${jwtToken}`
         }
@@ -19,7 +19,7 @@ export default function Card({title , done , id , jwtToken}){
    function handleDeleteClick(){
        if(jwtToken){
 
-           axios.delete(`http://localhost:8080/delete/${id}`,
+           axios.delete(`https://todo-list-ywe3.onrender.com/delete/${id}`,
            {
                headers:{
                    Authorization : `Bearer ${jwtToken}`
@@ -33,7 +33,7 @@ export default function Card({title , done , id , jwtToken}){
    }
    async function handleToggleTask (id) {
     try {
-      await axios.put(`http://localhost:8080/update/${id}`);
+      await axios.put(`https://todo-list-ywe3.onrender.com/update/${id}`);
     } catch (error) {
       
     }
