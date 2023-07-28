@@ -24,9 +24,7 @@ export default function Forgetpass(){
         }
         else{
             sendDatapass(newpass.pass , email);
-            setTimeout(()=>{
-                window.location='http://localhost:3000/login';
-            },3000)
+            
         }
     }
 
@@ -69,6 +67,9 @@ export default function Forgetpass(){
             setCount(n=> n+1);
             setShow({...show , succ : true});
             setRes({...res , succ :res.data.message});
+            setTimeout(()=>{
+                window.location='https://radiant-sable-3c911a.netlify.app/login';
+            },3000)
         })
         .catch(err=>{
             
