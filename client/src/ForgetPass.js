@@ -69,7 +69,7 @@ export default function Forgetpass(){
             setRes({...res , succ :res.data.message});
             setTimeout(()=>{
                 window.location='https://radiant-sable-3c911a.netlify.app/login';
-            },3000)
+            },5000)
         })
         .catch(err=>{
             
