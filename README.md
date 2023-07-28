@@ -1,7 +1,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<div align="center" size="50px">
   
 ![Todo](https://github.com/Bhavu2412/To_Do_FullStack/assets/102239817/302f8213-7f3f-42c8-a7c8-28106dc63a77)
  
