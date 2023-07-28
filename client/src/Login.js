@@ -9,7 +9,7 @@ export default function Login(){
     const [show,setShow] = useState({succ : false , err:false});
     const [res,setRes] = useState({succ : '' , err:''});
     const [data,setData] = useState({InputValue:'',password:''});
-    const [username, setUsername] = useState('');
+   
     const validateEmail = (email) => {
         
         return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
