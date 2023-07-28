@@ -44,7 +44,7 @@ export default function Login(){
             setShow({...show , succ : true});
             setRes({...res , succ :res.data.message});
             setTimeout(()=>{
-                window.location='http://localhost:3000/';
+                window.location='https://radiant-sable-3c911a.netlify.app/login/';
             },3000)
         })
         .catch(err=>{
