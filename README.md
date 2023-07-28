@@ -24,7 +24,7 @@ This is a To Do list or a Task manager used to manage diffrent tasks of diffrent
 
 ## Demo
 
-You can view a live website [here](https://64c356f073d5544130455877--radiant-sable-3c911a.netlify.app).
+You can view a live website [here](https://radiant-sable-3c911a.netlify.app).
 
 ## Technologies Used
 
