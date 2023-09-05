@@ -28,7 +28,7 @@ export default function Signup(){
                 setRes({...res , succ : resp.data.message});
                 setShow({...show , succ : true});
                 setTimeout(()=>{
-                    window.location='https://radiant-sable-3c911a.netlify.app/login';
+                    window.location='https://64f73671a87728009135de31--spontaneous-tiramisu-fca227.netlify.app/Signup/login';
                 },3000)
             })
             .catch(err=>{
