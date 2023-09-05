@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { FaFacebook, FaGoogle, FaApple, FaPhone } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
 import Popup from "../general/Popup";
 export default function Signup() {
@@ -28,7 +28,7 @@ export default function Signup() {
   }
   function sendData(d) {
     axios
-      .post("https://node-todofullstack.onrender.comsignup", data)
+      .post("https://node-fullstack-2zaj.onrender.com/signup", data)
       .then((resp) => {
         setRes({ ...res, succ: resp.data.message });
         setShow({ ...show, succ: true });

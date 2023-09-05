@@ -9,7 +9,7 @@ export default function TaskDetail({ jwtToken }) {
   const taskId = localStorage.getItem("TaskId");
   useEffect(() => {
     axios
-      .get(`https://node-todofullstack.onrender.comget/${taskId}`)
+      .get(`https://node-fullstack-2zaj.onrender.com/get/${taskId}`)
       .then((res) => {
         setTask({
           title: res.data.task.title,

@@ -7,7 +7,7 @@ export default function Home({ jwtToken, setTaskId }) {
   useEffect(() => {
     if (jwtToken) {
       axios
-        .get("https://node-todofullstack.onrender.comhome", {
+        .get("https://node-fullstack-2zaj.onrender.com/home", {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },
@@ -38,7 +38,7 @@ export default function Home({ jwtToken, setTaskId }) {
       })} */}
       <div className="tasks">
         {Tasks.length === 0 ? (
-          <img src="not_found.jpg" alt="not found" height="300px" />
+          <img src="src/not_found.jpg" alt="not found" height="300px" />
         ) : (
           Tasks.map((task) => (
             <Card

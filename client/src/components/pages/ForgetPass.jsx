@@ -46,7 +46,7 @@ export default function Forgetpass() {
 
   function sendData(email) {
     axios
-      .post("https://node-todofullstack.onrender.comforgetpassword", {
+      .post("https://node-fullstack-2zaj.onrender.com/forgetpassword", {
         email: email,
       })
       .then((res) => {
@@ -63,7 +63,7 @@ export default function Forgetpass() {
 
   function sendDatapass(n, e) {
     axios
-      .post("https://node-todofullstack.onrender.comreset", {
+      .post("https://node-fullstack-2zaj.onrender.com/reset", {
         email: e,
         password: n,
       })
@@ -80,7 +80,7 @@ export default function Forgetpass() {
 
   function sendDataotp(o, e) {
     axios
-      .post("https://node-todofullstack.onrender.comotpverify", {
+      .post("https://node-fullstack-2zaj.onrender.com/otpverify", {
         otp: o,
         email: e,
       })

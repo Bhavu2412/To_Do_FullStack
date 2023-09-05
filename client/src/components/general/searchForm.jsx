@@ -19,7 +19,7 @@ export default function Form({ jwtToken }) {
   const sendData = () => {
     if (jwtToken) {
       axios
-        .post("https://node-todofullstack.onrender.comcreate", data, {
+        .post("https://node-fullstack-2zaj.onrender.com/create", data, {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },

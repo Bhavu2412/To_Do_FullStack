@@ -13,7 +13,7 @@ export default function Card({ title, done, id, jwtToken, setTaskId }) {
     e.preventDefault();
     if (jwtToken) {
       axios
-        .delete(`https://node-todofullstack.onrender.comdelete/${id}`, {
+        .delete(`https://node-fullstack-2zaj.onrender.com/delete/${id}`, {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },
@@ -24,7 +24,7 @@ export default function Card({ title, done, id, jwtToken, setTaskId }) {
   }
   async function handleToggleTask(id) {
     try {
-      await axios.put(`https://node-todofullstack.onrender.comupdate/${id}`);
+      await axios.put(`https://node-fullstack-2zaj.onrender.com/update/${id}`);
     } catch (error) {}
   }
   return (

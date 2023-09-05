@@ -34,7 +34,7 @@ export default function Login() {
   function sendData(value, password) {
     console.log(value + " " + password);
     axios
-      .post("https://node-todofullstack.onrender.comlogin", {
+      .post("https://node-fullstack-2zaj.onrender.com/login", {
         [value]: data.InputValue,
         password: password,
       })
