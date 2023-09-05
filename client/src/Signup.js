@@ -28,7 +28,7 @@ export default function Signup(){
                 setRes({...res , succ : resp.data.message});
                 setShow({...show , succ : true});
                 setTimeout(()=>{
-                    window.location='https://64f73671a87728009135de31--spontaneous-tiramisu-fca227.netlify.app/Signup/login';
+                    window.location='https://64f73671a87728009135de31--spontaneous-tiramisu-fca227.netlify.app/login';
                 },3000)
             })
             .catch(err=>{
