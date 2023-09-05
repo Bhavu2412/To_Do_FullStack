@@ -7,7 +7,7 @@ export default function Home({ jwtToken, setTaskId }) {
   useEffect(() => {
     if (jwtToken) {
       axios
-        .get("http://localhost:8080/home", {
+        .get("https://node-todofullstack.onrender.comhome", {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },

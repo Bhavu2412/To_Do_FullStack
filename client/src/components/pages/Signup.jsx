@@ -28,7 +28,7 @@ export default function Signup() {
   }
   function sendData(d) {
     axios
-      .post("http://localhost:8080/signup", data)
+      .post("https://node-todofullstack.onrender.comsignup", data)
       .then((resp) => {
         setRes({ ...res, succ: resp.data.message });
         setShow({ ...show, succ: true });
