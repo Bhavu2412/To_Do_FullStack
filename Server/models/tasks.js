@@ -11,6 +11,10 @@ const taskSchema = new Schema({
         type: Boolean,
         require: true
     },
+    description:{
+        type: String,
+        require:true
+    },
     user:{
         type: Schema.Types.ObjectId,
         ref:'User'

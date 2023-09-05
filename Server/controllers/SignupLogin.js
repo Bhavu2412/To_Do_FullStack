@@ -90,14 +90,14 @@ exports.SignUp = (req, res, next) => {
 }
 
 exports.LogIn = (req, res, next) => {
-    let luser,token;
+    let luser,token,passlen;
     const searchQuery = {
         $or: [
           { username: req.body.username },
           { email: req.body.email},    
         ],
       }
-    const email = req.body.email;
+    
     const password = req.body.password;
     User.findOne(searchQuery)
         .then(user => {
@@ -117,14 +117,14 @@ exports.LogIn = (req, res, next) => {
             }
              token = jwt.sign({
                 email : luser.email,
-                userId : luser._id
-                
+                userId : luser._id,
+                name : luser.name,
             },
                 process.env.SECRET_KEY, { expiresIn: '1d' });
             
         })
         .then(result => {
-            res.status(200).json({ message: 'User logged in!!!' , token:token})
+            res.status(200).json({ message: 'User logged in!!!', user_name:luser.name , email : luser.email , username: luser.username , passlen : password.length , token:token})
         })
         .catch(err => {
             if (!err.statusCode) {

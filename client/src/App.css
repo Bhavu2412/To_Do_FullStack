@@ -1,27 +1,149 @@
-*{
-  
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+
+* {
   padding: 0px;
-  margin: 0px; 
+  margin: 0px;
 }
-body{
+body {
   background-color: whitesmoke;
 }
-.form{
-  border: 2px solid whitesmoke;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 5px;
-  background-color: rgb(160, 25, 25);
+.intro {
   color: whitesmoke;
-  width: 100%;
+  font-family: "Black Ops One";
+  color: rgb(92, 0, 0);
+  animation: Intro 2s;
+}
+@keyframes Intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.home-task {
+  margin-top: 100px;
+  margin: 50px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 50%;
-  align-items: center;
   justify-content: space-between;
+  width: 70vw;
 }
-.button-form{
+.form {
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(160, 25, 25);
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 420px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  animation: formani 2s;
+  overflow: hidden;
+}
+@keyframes formani {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 80px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+  }
+}
+.tasks {
+  overflow: auto;
+  width: 435px;
+  height: 360px;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 50px;
+  animation: tasksAni 2s;
+}
+@keyframes tasksAni {
+  0% {
+    position: relative;
+    bottom: 100px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+#email {
+  margin-top: 10px;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.task-detail-name {
+  animation: detail-Ani 3s;
+  overflow: hidden;
+  width: 100%;
+  height: 43px;
+}
+@keyframes detail-Ani {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.back-button {
+  position: relative;
+  left: 520px;
+  top: 30px;
+  background-color: whitesmoke;
+  color: maroon;
+  border: 2px solid rgb(160, 25, 25);
+  border-radius: 15px;
+  height: 40px;
+  width: 90px;
+  transition: 0.3s ease-in-out;
+  font-size: 13px;
+}
+.back-button:hover {
+  background-color: maroon;
+  color: whitesmoke;
+}
+.detail-page {
+  width: 100%;
+  height: 20%;
+}
+.task-details-page {
+  background-color: rgb(160, 25, 25);
+  margin-top: 100px;
+  color: whitesmoke;
+  width: 600px;
+  padding: 20px;
+  height: 280px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  flex-direction: column;
+  border: 2px solid rgb(160, 25, 25);
+  border-radius: 20px;
+}
+.button-form {
+  margin: 3px;
   background-color: whitesmoke;
   color: maroon;
   cursor: pointer;
@@ -29,22 +151,61 @@ body{
   border-radius: 5px;
   height: 30px;
   width: 100px;
+  transition: 0.5s ease-in-out;
 }
-.button-form:hover{
+.button-form:hover {
   background-color: maroon;
   color: whitesmoke;
   border: 2px solid maroon;
 }
-.input-searchForm{
-  width: 600px;
-  height: 30px;
+.input-searchForm {
+  margin: 3px;
+  padding: 3px;
+  width: 350px;
+  height: 27px;
   border: 2px solid white;
   border-radius: 5px;
-
 }
-.container-card{
+.input-searchForm-description {
+  margin: 3px;
+  padding: 3px;
+  width: 350px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.profile-head {
+  font-family: "Black Ops One", cursive;
+  animation: profilehead 2s;
+}
+@keyframes profilehead {
+  0% {
+    position: relative;
+    bottom: 30px;
+  }
+  100% {
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+.profile {
+  cursor: pointer;
+  margin-right: 5px;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 30px;
+  height: 35px;
+  width: 35px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-card {
+  cursor: pointer;
   margin: 10px;
-  width: 50%;
+  width: 400px;
   height: 50px;
   padding: 5px;
   background-color: rgb(160, 25, 25);
@@ -56,13 +217,23 @@ body{
   justify-content: space-between;
   border: 2px solid whitesmoke;
   border-radius: 7px;
+  transition: 0.3s ease-in-out;
 }
-.container-card:hover{
-  width: 51%;
+.container-card:hover {
+  width: 405px;
   height: 55px;
-  
 }
-.editbutton{
+
+@keyframes cardAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.editbutton {
   padding: 2px;
   display: flex;
   flex-direction: row;
@@ -70,33 +241,90 @@ body{
   align-items: center;
   justify-content: space-between;
 }
-.Card-Button{
+.Card-Button {
   padding: 2px;
   background-color: whitesmoke;
   color: maroon;
   border: 2px solid whitesmoke;
   border-radius: 5px;
 }
-button{
+button {
   cursor: pointer;
   margin: 2px;
 }
-.navbar-button{
+.navbar-button {
   height: 30px;
   width: 70px;
   color: rgb(160, 25, 25);
   background-color: whitesmoke;
   border: 2px solid whitesmoke;
   border-radius: 5px;
+  transition: 0.3s ease-in-out;
 }
-.navbar-button:hover{
+.ani-profile-name {
+  animation: profileAniname 5s steps(500);
+  overflow: hidden;
+}
+@keyframes profileAniname {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.about-container {
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 10px;
+  background-color: rgb(160, 25, 25);
+  color: whitesmoke;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(160, 25, 25);
+  border-radius: 20px;
+  font-size: 17px;
+}
+.about-head {
+  margin-bottom: 20px;
+  animation: headaboutAni 2s;
+}
+.description-about {
+  overflow: hidden;
+  animation: descriptionaboutAni 2s;
+}
+@keyframes headaboutAni {
+  0% {
+    opacity: 0;
+    position: relative;
+    right: 100px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    right: 0px;
+  }
+}
+@keyframes descriptionaboutAni {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.navbar-button:hover {
   background-color: maroon;
   color: whitesmoke;
   border: 2px solid maroon;
 }
-.navbar-container{
+.navbar-container {
   height: 65px;
- width: 100%;
+  width: 100%;
   background-color: rgb(160, 25, 25);
   display: flex;
   flex-direction: row;
@@ -104,7 +332,7 @@ button{
   align-items: center;
   justify-content: space-between;
 }
-.navbar-parts{
+.navbar-parts {
   margin: 5px;
   padding: 2px;
   display: flex;
@@ -113,7 +341,7 @@ button{
   align-items: center;
   justify-content: space-between;
 }
-.p-num{
+.p-num {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,20 +352,17 @@ button{
   border: 2px solid maroon;
   border-radius: 20px;
 }
-.input-navbar{
+.input-navbar {
   width: 400px;
   height: 30px;
   border-radius: 8px;
   border: 2px solid white;
 }
-input{
+
+img {
   margin-right: 3px;
 }
-img{
-  margin-right: 3px;
-}
-.discription{
-  
+.discription {
   background-color: rgb(160, 25, 25);
   color: white;
   padding: 10px;
@@ -147,18 +372,18 @@ img{
   border-radius: 10px;
   font-size: large;
 }
-.topic{
+.topic {
   padding: 10px;
   margin: 10px;
- 
+
   color: rgb(160, 25, 25);
 }
-main{
+main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container-login{
+.container-login {
   color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -166,14 +391,14 @@ main{
   align-items: center;
   margin: 20px;
   padding: 5px;
-  width: 50vw;
+  width: 500px;
   height: 100%;
-  background-color: rgb(160,25,25);
+  background-color: rgb(160, 25, 25);
   text-align: center;
-  border: 5px solid rgb(160,25,25);
+  border: 5px solid rgb(160, 25, 25);
   border-radius: 10px;
 }
-.container-signup{
+.container-signup {
   color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -182,35 +407,81 @@ main{
   flex-direction: column;
   margin: 20px;
   padding: 5px;
-  width: 70%;
+  width: 500px;
   height: 100%;
-  background-color: rgb(160,25,25);
+  background-color: rgb(160, 25, 25);
   text-align: center;
-  border: 5px solid rgb(160,25,25);
+  border: 5px solid rgb(160, 25, 25);
   border-radius: 10px;
 }
-#head{
+#head {
   margin-top: 20px;
+  animation: signupAnihead 2s;
 }
-#login input{
+
+@keyframes signupAnihead {
+  0% {
+    opacity: 0;
+    position: relative;
+    bottom: 50px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    bottom: 0px;
+  }
+}
+.signup-text {
+  overflow: hidden;
+  animation: signuptext 2s;
+}
+@keyframes signuptext {
+  0% {
+    opacity: 0;
+
+    position: relative;
+    bottom: 20px;
+  }
+  100% {
+    opacity: 1;
+
+    position: relative;
+    bottom: 0px;
+  }
+}
+#login input {
+  cursor: pointer;
   margin: 10px;
   margin-left: auto;
   padding: 10px;
-  width: 30vw;
+  width: 300px;
   background-color: rgb(255, 255, 237);
   border: 1px solid rgb(170, 170, 170);
   border-radius: 5px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 15px;
   color: maroon;
+  transition: 0.3s ease-in-out;
+  animation: inputani 2s;
 }
-#login input:active{
-  background-color: rgb(255, 255, 226);
-  border: 2px solid rgb(170, 170, 170);
+@keyframes inputani {
+  0% {
+    opacity: 0;
+    position: relative;
+    right: 100px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    right: 0px;
+  }
+}
+#login input:hover {
+  background-color: rgb(255, 255, 187);
+  border: 2px solid rgb(255, 255, 187);
   border-radius: 5px;
- 
 }
-.signin{
+.signin {
   padding: 10px;
   width: 30vw;
   height: 10%;
@@ -222,63 +493,113 @@ main{
   border-radius: 40px;
   cursor: pointer;
 }
-.signin big{
+.signin big {
   margin: 10px;
 }
-.signin:hover{
+.signin:hover {
   color: white;
   border: 2px solid white;
   font-size: 16px;
 }
-#submit{
-  height: 50px;
-  width: 150px;
+#submit {
+  animation: submitAni 2s;
+  height: 35px;
+  width: 100px;
   background-color: whitesmoke;
-  color: rgb(160,25,25);
+  color: rgb(160, 25, 25);
   border: 1px solid whitesmoke;
-  border-radius: 30px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 17px;
+  border-radius: 5px;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
-#submit:hover{
- height: 53px;
-  width: 158px;
+@keyframes submitAni {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 50px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+  }
 }
-.login{
+
+#submit:hover {
+  background-color: maroon;
+  color: whitesmoke;
+  border: 2px solid maroon;
+}
+#signup-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
-.forget:hover{
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.forget:hover {
   font-size: 16px;
   cursor: pointer;
 }
-#don{
+#don {
   margin-right: 3px;
   color: lightyellow;
+  animation: donAni 2s;
+}
+@keyframes donAni {
+  0% {
+    opacity: 0;
+    position: relative;
+    right: 20px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    right: 0px;
+  }
 }
 
-.signup{
+.signup {
   display: flex;
   flex-direction: row;
   margin-top: 3px;
   margin-bottom: 7px;
-
 }
-#signup:hover{
-  color:  whitesmoke;
-  font-size: 17px;
+#signup {
+  animation: signupAni 2s;
+  transition: 0.3s ease-in-out;
+  height: 20px;
+}
+@keyframes signupAni {
+  0% {
+    opacity: 0;
+    position: relative;
+    left: 20px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    left: 0px;
+  }
+}
+#signup:hover {
+  color: whitesmoke;
+  color: maroon;
   cursor: pointer;
 }
-.radioinp{
+.radioinp {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.inpradio{
+.inpradio {
   width: 20px;
   display: flex;
   justify-content: center;
@@ -286,7 +607,6 @@ main{
   flex-direction: row;
   color: black;
 }
-
 
 .popup {
   position: fixed;
@@ -298,7 +618,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; 
+  z-index: 9999;
 }
 
 .popup-content {
@@ -328,7 +648,7 @@ main{
   border: 2px solid rgb(160, 25, 25);
   border-radius: 2px;
 }
-.mainClass{
+.mainClass {
   background-color: rgb(160, 25, 25);
   color: whitesmoke;
   display: flex;
@@ -337,13 +657,12 @@ main{
   padding: 5px;
   width: 100%;
   height: 100%;
-  background-color: rgb(160,25,25);
+  background-color: rgb(160, 25, 25);
   text-align: center;
-  border: 5px solid rgb(160,25,25);
+  border: 5px solid rgb(160, 25, 25);
   border-radius: 10px;
 }
-.container-forgetpass{
-
+.container-forgetpass {
   color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -353,49 +672,120 @@ main{
   padding: 5px;
   width: 50vw;
   height: 100%;
-  background-color: rgb(160,25,25);
+  background-color: rgb(160, 25, 25);
   text-align: center;
-  border: 5px solid rgb(160,25,25);
+  border: 5px solid rgb(160, 25, 25);
   border-radius: 10px;
 }
-.input-forgetpass{
-  
+.input-forgetpass {
   color: maroon;
   width: 300px;
   height: 30px;
   border-radius: 8px;
   border: 2px solid white;
 }
-.p-forgetpass{
-  
+.p-forgetpass {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.p-new{
+.p-new {
   margin: 10px;
 }
-.otp-input{
+.otp-input {
   color: maroon;
   width: 200px;
   height: 30px;
-  
+
   border-radius: 8px;
   border: 2px solid white;
 }
-.password-input{
+.password-input {
   display: flex;
   flex-direction: row;
   margin-top: 5px;
   margin-bottom: 10px;
 }
-.input-forget{
+.input-forget {
   margin: 2px;
 }
-.otp-input2{
+.otp-input2 {
   color: maroon;
   width: 200px;
   height: 30px;
   margin-top: 10px;
   border-radius: 8px;
   border: 2px solid white;
+}
+.container-profile {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+}
+.photo {
+  animation: ProfileAnimation 2s;
+  background-color: whitesmoke;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.photo-profile {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-info {
+  font-size: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: space-around;
+}
+.para-profile {
+  margin: 20px;
+  padding: 20px;
+  font-family: "Prompt", sans-serif;
+}
+.detail-profile {
+  font-size: 25px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@keyframes ProfileAnimation {
+  0% {
+    position: relative;
+    bottom: 353px;
+    right: 305px;
+    height: 35px;
+    width: 35px;
+    border-radius: 100px;
+  }
+  100% {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+  }
 }
