@@ -8,7 +8,7 @@ export default function Signup(){
     const navigate = useNavigate();
     const [show, setShow] =useState({succ : false , err : false});
     const [res, setRes] = useState({succ : '' , err : ''});
-    const [data,setData] = useState({email: '' , password : '' , username : '' , date : '' , name:''});
+    const [data,setData] = useState({email: '' , password : '' , username : '' , date : '1/12/2003' , name:''});
     function handleInputChange(e){
         const {name , value } = e.target;
         setData({...data , [name]:value});
@@ -66,7 +66,7 @@ export default function Signup(){
                 <p id="pass"> <b>Create a Password</b></p>
                 <input id="inppass" type="password" value={data.password} name="password" onChange={handleInputChange}/>
                 <p id="dob"> <b>Enter your date of birth</b></p>
-                <input type="date" id="day" name="day" value={data.date} onChange={handleInputChange}/>   
+                <input type="date" id="day" name="day"/>   
                 <button type="submit" id="submit"><b>Signup</b></button>
                 </form>
                 <br/>
